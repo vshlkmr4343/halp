@@ -1,0 +1,324 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+  xxxl: 1600px,
+) !default;
+
+// ************* Font weight ***************
+ @for $fw from 0 through 10 {
+  .fw-#{$fw} {
+    font-weight: #{$fw * 100} !important;
+  }
+}
+// ************* Opacity ***************
+$opacityValue: 99;
+@for $opacity from 0 through $opacityValue {
+  .op-#{$opacity} {
+    opacity: #{$opacity / 100} !important;
+  }
+}
+// @each $deviceName, $screenWidth in $grid-breakpoints {
+//   @media (min-width: $screenWidth) {
+//     @for $opacity from 0 through $opacityValue {
+//       .opa-#{$deviceName}-#{$opacity} {
+//         opacity: 0.#{$opacity} !important;
+//       }
+//     }
+//   }
+// }
+
+// ************* Height ***************
+$heightLastValue: 100;
+@for $heightPx from 0 through $heightLastValue {
+  .h_#{$heightPx} {
+    height: #{$heightPx / 16}rem !important;
+  }
+}
+@each $deviceName, $screenWidth in $grid-breakpoints {
+  @media (min-width: $screenWidth) {
+    @for $heightPx from 0 through $heightLastValue {
+      .h_#{$deviceName}-#{$heightPx} {
+        height: #{$heightPx / 16}rem !important;
+      }
+    }
+  }
+}
+
+// ************* Line Height ***************
+$lineHeightLastValue: 100;
+@for $lHeightPx from 0 through $lineHeightLastValue {
+  .lh-#{$lHeightPx} {
+    line-height: #{$lHeightPx / 16}rem !important;
+  }
+}
+@each $deviceName, $screenWidth in $grid-breakpoints {
+  @media (min-width: $screenWidth) {
+    @for $lHeightPx from 0 through $lineHeightLastValue {
+      .lh-#{$deviceName}-#{$lHeightPx} {
+        line-height: #{$lHeightPx / 16}rem !important;
+      }
+    }
+  }
+}
+
+// ************ Font size  *************
+$fontSizeLastValue: 100;
+@for $fontSize from 0 through $fontSizeLastValue {
+  .fs-#{$fontSize} {
+    font-size: #{$fontSize / 16}rem !important;
+  }
+}
+@each $deviceName, $screenWidth in $grid-breakpoints {
+  @media (min-width: $screenWidth) {
+    @for $fontSize from 0 through $fontSizeLastValue {
+      .fs-#{$deviceName}-#{$fontSize} {
+        font-size: #{$fontSize / 16}rem !important;
+      }
+    }
+  }
+}
+
+// ****************** border-radius  ****************
+$rediusLastValue: 100;
+@for $radius from 0 through $rediusLastValue {
+  .border-radius-#{$radius} {
+    border-radius: #{$radius / 16}rem !important;
+  }
+  .border-radius-top-left-#{$radius} {
+    border-radius: #{$radius / 16}rem !important;
+  }
+  .border-radius-top-right-#{$radius} {
+    border-radius: #{$radius / 16}rem !important;
+  }
+  .border-radius-bottom-right-#{$radius} {
+    border-radius: #{$radius / 16}rem !important;
+  }
+  .border-radius-bottom-left-#{$radius} {
+    border-radius: #{$radius / 16}rem !important;
+  }
+}
+
+@each $deviceName, $screenWidth in $grid-breakpoints {
+  @media (min-width: $screenWidth) {
+    @for $radius from 0 through $rediusLastValue {
+      .border-radius-#{$deviceName}-#{$radius} {
+        border-radius: #{$radius / 16}rem !important;
+      }
+      .border-radius-#{$deviceName}-top-left-#{$radius} {
+        border-radius: #{$radius / 16}rem !important;
+      }
+      .border-radius-#{$deviceName}-top-right-#{$radius} {
+        border-radius: #{$radius / 16}rem !important;
+      }
+      .border-radius-#{$deviceName}-bottom-right-#{$radius} {
+        border-radius: #{$radius / 16}rem !important;
+      }
+      .border-radius-#{$deviceName}-bottom-left-#{$radius} {
+        border-radius: #{$radius / 16}rem !important;
+      }
+    }
+  }
+}
+
+// *********** width percentage ****************
+$widthInPercentageLastValue: 100;
+@for $widthPercent from 0 through $widthInPercentageLastValue {
+  .w-#{$widthPercent}-pct {
+    width: #{$widthPercent * 1%} !important;
+  }
+}
+@each $deviceName, $screenWidth in $grid-breakpoints {
+  @media (min-width: $screenWidth) {
+    @for $widthPercent from 0 through $widthInPercentageLastValue {
+      .w-#{$deviceName}-#{$widthPercent}-pct {
+        width: #{$widthPercent * 1%} !important;
+      }
+    }
+  }
+}
+
+// ************ width rem and px  **********************
+$widthInPixelLastValue: 1000;
+@for $widthPixel from 0 through $widthInPixelLastValue {
+  .w_#{$widthPixel} {
+    width: #{$widthPixel / 16}rem !important;
+  }
+}
+@each $deviceName, $screenWidth in $grid-breakpoints {
+  @media (min-width: $screenWidth) {
+    @for $widthPixel from 0 through $widthInPixelLastValue {
+      .w_#{$deviceName}-#{$widthPixel} {
+        width: #{$widthPixel / 16}rem !important;
+      }
+    }
+  }
+}
+
+// ***************** Z-index  ******************
+$zindexLastValue: 100;
+@for $zIndex from 0 through $zindexLastValue {
+  .zi-#{$zIndex} {
+    z-index: #{$zIndex * 10} !important;
+  }
+}
+@each $deviceName, $screenWidth in $grid-breakpoints {
+  @media (min-width: $screenWidth) {
+    @for $zIndex from 0 through $zindexLastValue {
+      .zi-#{$deviceName}-#{$zIndex * 10} {
+        z-index: #{$zIndex * 10} !important;
+      }
+      .zi-#{$deviceName}-n#{$zIndex * 10} {
+        z-index: -#{$zIndex * 10} !important;
+      }
+    }
+  }
+}
+
+// ***************** Padding  ******************
+$paddingInPixelLastValue: 100;
+@for $paddIng from 0 through $paddingInPixelLastValue {
+  .p_#{$paddIng} {
+    padding: #{$paddIng / 16}rem !important;
+  }
+  .pt_#{$paddIng},
+  .py_#{$paddIng} {
+    padding-top: #{$paddIng / 16}rem !important;
+  }
+  .pb_#{$paddIng},
+  .py_#{$paddIng} {
+    padding-bottom: #{$paddIng / 16}rem !important;
+  }
+  .pl_#{$paddIng},
+  .px_#{$paddIng} {
+    padding-left: #{$paddIng / 16}rem !important;
+  }
+  .pr_#{$paddIng},
+  .px_#{$paddIng} {
+    padding-right: #{$paddIng / 16}rem !important;
+  }
+}
+@each $deviceName, $screenWidth in $grid-breakpoints {
+  @media (min-width: $screenWidth) {
+    @for $paddIng from 0 through $paddingInPixelLastValue {
+      .p_#{$deviceName}-#{$paddIng} {
+        padding: #{$paddIng / 16}rem !important;
+      }
+      .pt_#{$deviceName}-#{$paddIng},
+      .py_#{$deviceName}-#{$paddIng} {
+        padding-top: #{$paddIng / 16}rem !important;
+      }
+      .pb_#{$deviceName}-#{$paddIng},
+      .py_#{$deviceName}-#{$paddIng} {
+        padding-bottom: #{$paddIng / 16}rem !important;
+      }
+      .pl_#{$deviceName}-#{$paddIng} {
+        padding-left: #{$paddIng / 16}rem !important;
+      }
+      .pr_#{$deviceName}-#{$paddIng},
+      .px_#{$deviceName}-#{$paddIng} {
+        padding-right: #{$paddIng / 16}rem !important;
+      }
+      .py_#{$deviceName}-#{$paddIng},
+      .px_#{$deviceName}-#{$paddIng} {
+        padding-top: #{$paddIng / 16}rem !important;
+        padding-bottom: #{$paddIng / 16}rem !important;
+      }
+    }
+  }
+}
+
+// ***************** Margin  ******************
+$marginInPixelLastValue: 100;
+@for $margin from 0 through $marginInPixelLastValue {
+  .m-#{$margin} {
+    margin: #{$margin / 16}rem !important;
+  }
+  .mt_#{$margin} {
+    margin-top: #{$margin / 16}rem !important;
+  }
+  .mt_n#{$margin} {
+    margin-top: -#{$margin / 16}rem !important;
+  }
+  .mb_#{$margin} {
+    margin-bottom: #{$margin / 16}rem !important;
+  }
+  .mr_#{$margin} {
+    margin-right: #{$margin / 16}rem !important;
+  }
+  .ml-#{$margin} {
+    margin-left: #{$margin / 16}rem !important;
+  }
+}
+@each $deviceName, $screenWidth in $grid-breakpoints {
+  @media (min-width: $screenWidth) {
+    @for $margin from 0 through $marginInPixelLastValue {
+      .m_#{$deviceName}-#{$margin} {
+        margin: #{$margin / 16}rem !important;
+      }
+      .mt_#{$deviceName}-#{$margin} {
+        margin-top: #{$margin / 16}rem !important;
+      }
+      .mt_n#{$deviceName}-#{$margin} {
+        margin-top: -#{$margin / 16}rem !important;
+      }
+      .mb_#{$deviceName}-#{$margin} {
+        margin-bottom: #{$margin / 16}rem !important;
+      }
+      .mr_#{$deviceName}-#{$margin} {
+        margin-right: #{$margin / 16}rem !important;
+      }
+      .ml_#{$deviceName}-#{$margin} {
+        margin-left: #{$margin / 16}rem !important;
+      }
+    }
+  }
+}
+
+// Single Class
+.object-cover {
+  object-fit: cover;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// *********  Line Height *******************
+
+ 
+.line-height-normal {
+  line-height: normal;
+}
+
+// *********  Font Weight *******************
+.font-weight-Thin {
+  font-weight: 100 !important;
+}
+.font-weight-Extra-light {
+  font-weight: 200 !important;
+}
+.font-weight-Light {
+  font-weight: 300 !important;
+}
+.font-weight-Regular {
+  font-weight: 400 !important;
+}
+.font-weight-Medium {
+  font-weight: 500 !important;
+}
+.font-weight-Semi-bold {
+  font-weight: 600 !important;
+}
+.font-weight-Bold {
+  font-weight: 700 !important;
+}
+.font-weight-Extra-bold {
+  font-weight: 800 !important;
+}
+.font-weight-Black {
+  font-weight: 900 !important;
+}

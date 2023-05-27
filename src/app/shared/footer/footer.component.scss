@@ -1,0 +1,22 @@
+.footer {
+  padding: 15px;
+  background: #f7f5f5;
+
+  // &.fixed {
+  //   position: absolute;
+  //   left: 0;
+  //   right: 0;
+  //   width: 100%;
+  //   bottom: 0;
+  //   top: auto;
+  // }
+
+  ul{
+    li {
+      list-style: none;
+      text-align: left;
+      padding: 10px 0;
+      text-transform: uppercase;
+    }
+  }
+}

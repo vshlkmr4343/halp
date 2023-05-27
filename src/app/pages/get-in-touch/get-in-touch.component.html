@@ -1,0 +1,99 @@
+<div class="banner-bg mb-5" style="background: rgba(255, 255, 255, 0) url('./assets/images/banner.png') center center no-repeat; background-size: cover;"></div>
+
+
+<div class="container my-5">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <h1>Get In Touch</h1>
+        <div class="email-enquiry">
+          <div class="em-enq-heading">
+            <img src="./assets/images/logo.png" alt="">
+          </div>
+          <div class="user-info mx-4 py-4 border-bottom">
+            <figure class="mr-3 mb-0">
+              <!-- <img src="./assets/images/user.png" alt=""> -->
+              <img [src]="imageURL +'user/' + propertyAndClientDetails?.clientImage" onError="this.src='assets/images/no-image.png'" alt="">
+
+            </figure>
+            <div>
+              <h6>{{propertyAndClientDetails?.clentFullName}}</h6>
+              <div class="user-id px-2">{{propertyAndClientDetails?.clentPhone}}</div>
+            </div>
+          </div>
+          <div class="mx-4 py-4 border-bottom">
+            <!-- <h6 class="address">58 A, East Madison Street, UK Baltimore, MD, USA 4508</h6> -->
+            <h6 class="address">{{propertyAndClientDetails?.property_address}}</h6>
+            <h6 class="price mb-0"><strong class="text-theme-blue-1">Price:</strong> ${{propertyAndClientDetails?.property_price}}</h6>
+          </div>
+          <form [formGroup]="enquiryForm">
+            <div class="mx-4 py-4 enq-form">
+              <h6>What's your enquiry about?</h6>
+              <div class="d-flex enq-check flex-wrap">
+                <ul>
+                  <ng-container *ngFor="let enquiry of enquiryAbourArray; let o=odd;">
+                    <li class="my-3" *ngIf="o"><mat-checkbox (change)="selectEnquiry($event, enquiry)" [(ngModel)]="enquiry.checked" [ngModelOptions]="{standalone: true}">{{enquiry.title}}</mat-checkbox></li>
+                  </ng-container>
+                </ul>
+                <ul>
+                  <ng-container *ngFor="let enquiry of enquiryAbourArray; let e=even;">
+                    <li class="my-3" *ngIf="e"><mat-checkbox (change)="selectEnquiry($event, enquiry)" [(ngModel)]="enquiry.checked" [ngModelOptions]="{standalone: true}">{{enquiry.title}}</mat-checkbox></li>
+                  </ng-container>
+                </ul>
+    
+                <mat-error *ngIf="enquiryForm.controls.enquiry_about.touched && enquiryForm.controls.enquiry_about.hasError('required')">
+                  Enquiry about is required.
+                </mat-error>
+              </div>
+              <!-- <h6>Which describes you best?</h6>
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label class="label">Select one</mat-label>
+                <mat-select>
+                  <mat-option value="option1">Option 1</mat-option>
+                  <mat-option value="option2">Option 2</mat-option>
+                  <mat-option value="option3">Option 3</mat-option>
+                </mat-select>
+              </mat-form-field> -->
+              <h6>Write a message</h6>
+              <textarea formControlName="message" id="" rows="5" placeholder="Typing..." class="w-100 px-2"></textarea>
+              <div class="row border-bottom">
+                <div class="col-md-6 my-3">
+                  <h6>Name *</h6>
+                  <input formControlName="name" type="text" placeholder="John Doe" class="w-100 px-2">
+    
+                  <mat-error *ngIf="enquiryForm.controls.name.touched && enquiryForm.controls.name.hasError('required')">
+                    Name is required.
+                  </mat-error>
+    
+                </div>
+                <div class="col-md-6 my-3">
+                  <h6>Email *</h6>
+                  <input formControlName="email" type="email" placeholder="john.doe@gmail.com" class="w-100 px-2">
+    
+                  <mat-error *ngIf="enquiryForm.controls.email.touched && enquiryForm.controls.email.hasError('required')">
+                    Email address is required.
+                  </mat-error>
+                  <mat-error *ngIf="enquiryForm.controls.email.touched && enquiryForm.controls.email.hasError('pattern')">
+                    Enter valid email address.
+                  </mat-error>
+    
+                </div>
+                <div class="col-md-6 my-3">
+                  <h6>Mobile</h6>
+                  <input formControlName="mobile" type="tel" placeholder="9874561235" class="w-100 px-2">
+    
+                  <mat-error *ngIf="enquiryForm.controls.mobile.touched && enquiryForm.controls.mobile.hasError('required')">
+                    Mobile is required.
+                  </mat-error>
+    
+                </div>
+              </div>
+              <div class="row justify-content-center my-3">
+                <button class="btn btn-submit" (click)="submitEnquiry(enquiryForm?.value)">Submit</button>
+              </div>
+            </div>
+            </form>
+        </div>
+      </div>
+    </div>
+</div>
+<app-footer></app-footer>

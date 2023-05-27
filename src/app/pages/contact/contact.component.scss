@@ -1,0 +1,92 @@
+
+.banner-bg {
+    height: 50vh !important;
+    @media (max-width: 991px) {
+        height: 58vh !important;
+    }
+    @media (max-width: 768px) {
+        height: 50vh !important;
+    }    
+    @media (max-width: 767px) {
+        height: 58vh !important;
+    }  
+}
+
+h1 {
+    color: #000000;
+    font-weight: 700;
+    
+    text-align: center;
+    line-height: 100px;
+    @media (max-width: 991px) {
+        margin-top: 0;
+    }
+}
+
+.contact-us-card  {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0 0;
+    filter: drop-shadow(0px 3px 31px rgba(0,0,0,0.2));
+    background-color: #ffffff;
+    position: relative;
+    .contact-us-heading {
+        width: 100%;
+        height: 102px;
+        border-radius: 10px 10px 0 0;
+        filter: drop-shadow(0px 3px 31px rgba(0,0,0,0.2));
+        background-color: #01104b;
+        color: #ffffff;
+        font-weight: 700;
+        
+        text-align: center;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+    }
+    .contact-us-container {
+        ul {
+            padding-left: 0;
+            li {
+                list-style-type: none;
+                font-size: 20px;
+                line-height: 40px;
+                color: #565656;
+                font-weight: 600;
+                
+                text-align: center;
+                padding: 15px;
+            }
+        }
+        p {
+            font-size: 20px;
+            line-height: 40px;
+            color: #565656;
+            font-weight: 600;
+            
+            text-align: center;
+        }
+    }
+    .contact-us-footer {
+        width: 100%;
+        height: 60px;
+        filter: drop-shadow(0px 24px 45px rgba(39,39,39,0.08));
+        background-color: #001149;
+        font-size: 25px;
+        letter-spacing: -1px;
+        line-height: 38px;
+        color: #ffffff;
+        font-weight: 700;
+        
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        cursor: pointer;
+    }
+}

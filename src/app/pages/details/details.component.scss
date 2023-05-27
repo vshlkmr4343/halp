@@ -1,0 +1,308 @@
+
+.banner-bg {
+    height: 100vh !important;
+    @media (max-width: 991px) {
+        height: 197vh !important;
+    }
+    @media (max-width: 768px) {
+        height: 100vh !important;
+    }
+    @media (max-width: 767px) {
+        height: 197vh !important;
+    }
+}
+
+.bannerdiv1 {
+    background-color: #0011499e;
+}
+
+.bannerdiv2 {
+    background-color: #001149e8;
+}
+
+.orline {
+    background-image: linear-gradient(#ffffff, #000, #fff);
+    height: 162px;
+    width: 1px;
+    margin: 0 auto;
+}
+
+.ortext {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--theme-blue);
+    text-align: center;
+    color: var(--theme-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 13px;
+}
+.py-ct {
+    padding-top: 25px;
+    // padding-bottom: 35px;
+    min-height: 140px;
+    h4, h6 {
+        text-align: center;
+    }
+}
+
+.py-c {
+    padding-top: 25px;
+    // padding-bottom: 25px;
+    min-height: 140px;
+    h4, h6 {
+        text-align: center;
+    }
+}
+
+.brand {
+    margin-top: -60px;
+}
+
+.info {
+    margin-top: -453px;
+}
+
+.cmb {
+    svg {
+        height: 18px;
+        width: 30px;
+        path {
+            fill: var(--theme-blue)
+        }
+    }
+}
+
+.ps {
+    svg {
+        height: 65px;
+        width: 70px;
+        display: flex;
+        margin: 0 auto;
+        path {
+            fill: var(--purple)
+        }
+    }
+}
+
+.caruosel-div {
+    svg {
+      height: 16px;
+      width: 24px;
+      path {
+        fill: #fff;
+      }
+    }
+}
+@media (max-width: 768px) {
+    .bannerdiv1 h5 , .bannerdiv2 h5,
+    .info p {
+        font-size: 14px;
+    }
+    .bannerdiv1  img {
+        height: 10px;
+    } 
+    .bannerdiv2 h4{
+        font-size: 16px;
+    }
+    .bannerdiv2 h6{
+        font-size: 12px;
+    }
+    .cmb {
+        h5, p, button {
+            font-size: 12px;
+        }
+        button {
+            padding: 2px;
+        }
+    }
+    .info .bannerdiv1 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background-color: #001149 !important;
+    }
+}
+
+.email-enquiry {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0px 3px 31px rgba(0,0,0,0.1));
+    background-color: #ffffff;
+
+    .em-enq-heading {
+        width: 100%;
+        height: 100px;
+        background-color: #01104b;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        h1 {
+            text-transform: uppercase;
+            color: #ffffff;
+            font-weight: 700;
+            
+            text-align: center;
+            line-height: 100px;
+        }
+    }
+    .user-info {
+        display: flex;
+        align-items: center;
+        figure {
+            width: 113px;
+            height: 113px;
+            background-color: #01104b;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 110px;
+                height: 110px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+
+        h6 {
+            font-size: 18px;
+            line-height: 33px;
+            color: #01104b;
+            font-weight: 600;
+            
+        }
+        .user-id {
+            font-size: 18px;
+            line-height: 33px;
+            color: #000000;
+            font-weight: 600;
+            
+            width: 112px;
+            height: 31px;
+            background-color: #ffffff;
+            border: 1px solid #000000;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        h6.address, h6.price {
+            font-size: 21px;
+            line-height: 37px;
+            color: #1d1d1b;
+            font-weight: 500;
+            font-family: "Avenir Next";
+        }
+    }
+
+    .enq-form {
+        h6 {
+            font-size: 18px;
+            line-height: 30px;
+            color: #000000;
+            font-weight: 600;
+            
+        }
+        .enq-check {
+            ul {
+                padding-left: 0;
+                margin-right: 100px;
+                @media (max-width: 768px) {
+                    margin-right: 10px;
+                    margin-bottom: 0;
+                }
+                li {
+                    list-style-type: none;
+                    font-size: 16px;
+                    line-height: 30px;
+                    color: #000000;
+                    font-weight: 500;
+                    
+                }
+            }
+        }
+        input, input::placeholder,
+        textarea, textarea::placeholder {
+            font-size: 18px;
+            line-height: 30px;
+            color: #000000;
+            font-weight: 600;
+            
+        }
+        input, textarea {
+            border-radius: 5px;
+            border: 1px solid #000000;
+        }
+        input {
+            height: 70px;
+            padding: 20px;
+        }
+        .btn-submit {
+            width: 291px;
+            height: 60px;
+            border-radius: 5px;
+            filter: drop-shadow(0px 24px 45px rgba(39,39,39,0.08));
+            background-color: #001149;
+            font-size: 25px;
+            letter-spacing: -1px;
+            line-height: 38px;
+            color: #ffffff;
+            font-weight: 700;
+            
+            text-transform: uppercase;
+        }
+    }
+}
+
+.caruosel-div {
+    margin-top: -29px !important;
+}
+
+.bannerdiv1 {
+    svg {
+        width: 70px;
+        height: 31.5px;
+        path {
+            fill: #fff;
+        }
+    }
+    figure {
+        margin-bottom: 0;
+        svg {
+            width: 40px;
+            height: 22px;
+            path {
+                fill: #fff;
+            }
+        }
+    }
+}
+
+.desc {
+    svg {
+      height: 16px;
+      width: 24px;
+      path {
+        fill: var(--purple);
+      }
+    }
+    figure {
+        margin-top: -4px;
+        svg {
+            width: 24px;
+            height: 12px;
+            path {
+                fill: var(--purple);
+            }
+        }
+    }
+}

@@ -1,0 +1,391 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import "~@angular/material/theming";
+$theme-colors: (
+  "white": #ffffff,
+  "footer": #f7f5f5,
+  "theme-blue": #000b47,
+  "theme-blue-1": #01104b,
+  "dropdown": #f4f1f1,
+  "purple": #9b0273,
+  "muted": #717070,
+  "muted-theme": #333333,
+  "muted-blue": #f3f6fe,
+);
+
+// @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+// @import "~aos/dist/aos.css";
+// @import "~@fancyapps/fancybox/dist/jquery.fancybox.css";
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+@import "~bootstrap/scss/bootstrap";
+@import "./assets/css/preset-style.scss";
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+@import "./color-palette";
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$default-primary: mat-palette($pallet);
+$default-accent: mat-palette($pallet-accent, A200, A100, A400);
+// The warn palette is optional (defaults to red).
+$default-warn: mat-palette($mat-red);
+// Create the theme object (a Sass map containing all of the palettes).
+$default-theme: mat-light-theme($default-primary, $default-accent, $default-warn);
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($default-theme);
+
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  outline: none !important;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif; 
+  line-height: normal;
+}
+
+@font-face {
+  font-family: font-avenir-normal;
+  src: url(./assets/fonts/AvenirLTStd-Book.otf);
+}
+.font-avenir {
+  font-family: font-avenir-normal;
+}
+
+a {
+  transition: ease 0.3s;
+}
+button {
+  transition: ease 0.3s;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// SWEET ALERT
+// @import '~@sweetalert2/theme-dark/dark.scss';
+
+app-loader {
+  display: block;
+}
+
+.mat-icon {
+  vertical-align: middle;
+}
+
+// DYNAMIC WIDTH
+@mixin DYNAMIC_WIDTH_PERCENTAGE {
+  @for $i from 1 through 100 {
+    .width-#{$i} {
+      width: #{$i + "%"};
+    }
+  }
+}
+
+@include DYNAMIC_WIDTH_PERCENTAGE;
+
+@mixin DYNAMIC_WIDTH_PEXELS {
+  @for $i from 1 through 2000 {
+    .pxwidth-#{$i} {
+      width: #{$i + "px"};
+    }
+  }
+}
+
+@include DYNAMIC_WIDTH_PEXELS;
+
+.font-cario {
+  font-family: 'Cairo', sans-serif;
+}
+
+.header-dropdown {
+  .mat-form-field-appearance-fill .mat-form-field-underline::before {
+    background-color: rgb(0 0 0 / 0%) !important;
+  }
+
+  .mat-select-arrow {
+    // border: 0 !important;
+    // height: 20px !important;
+    // width: 20px !important;
+    // background: url(./assets/images/down_arrow@1px.png) center center no-repeat;
+    height: 14px !important;
+    width: 14px !important;
+    border-color: var(--purple);
+    border-width: 1px 1px 0 0;
+    transform: rotate(
+    135deg
+    );
+    margin-top: -10px;
+  }
+  .mat-form-field-wrapper {
+    padding-bottom: 0 !important;
+  }
+  .mat-form-field-appearance-fill .mat-form-field-flex,
+  .mat-form-field-ripple {
+    background-color: rgb(0 0 0 / 0%) !important;
+  }
+
+  .mat-icon {
+    margin-right: 20px;
+  }
+}
+
+.header-dropdown-bottom {
+
+  .mat-form-field-appearance-fill .mat-form-field-underline::before {
+    background-color: rgb(0 0 0 / 0%) !important;
+  }
+
+  .mat-select-arrow {
+    // border: 0 !important;
+    // height: 10px !important;
+    // width: 20px !important;
+    // background: url(./assets/images/header-dropdown-bottom.png) center center no-repeat;
+    // margin-top: 7px;
+    height: 10px !important;
+    width: 10px !important;
+    border-color: #fff;
+    border-width: 1px 1px 0 0;
+    transform: rotate(
+    135deg
+    );
+  }
+  .mat-form-field-wrapper {
+    padding-bottom: 0 !important;
+  }
+  .mat-form-field-appearance-fill .mat-form-field-infix,
+  .mat-form-field-type-mat-select:not(.mat-form-field-disabled) .mat-form-field-flex {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .mat-form-field-appearance-fill .mat-form-field-flex,
+  .mat-form-field-ripple {
+    background-color: rgb(0 0 0 / 0%) !important;
+  }
+
+}
+
+.enq-form {
+  .mat-select-arrow {
+    // border: 0 !important;
+    // height: 10px !important;
+    // width: 20px !important;
+    // background: url(./assets/images/header-dropdown-bottom.png) center center no-repeat;
+    // margin-top: 7px;
+    // filter: invert(1);
+    height: 10px !important;
+    width: 10px !important;
+    border-color: rgb(0, 0, 0);
+    border-width: 1px 1px 0 0;
+    transform: rotate(
+    135deg
+    );
+  }
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: rgb(0 0 0) !important;
+  }
+  mat-label.label {
+      font-size: 18px;
+      color: #000000;
+      font-weight: 600;
+      
+  }
+}
+
+.banner-bg {
+  height: 90vh;
+  // background: rgba(255, 255, 255, 0) url('./assets/images/banner.png') center center no-repeat;
+  background: center center no-repeat;
+  background-size: cover;
+}
+
+.caruosel-div {
+  width: 78px;
+  background-color: #001149;
+  margin-top: -13px;
+  position: relative;
+}
+
+.owl-theme {
+  display: grid !important;
+}
+
+.owl-theme .owl-nav [class*=owl-],
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background-color: #fff !important;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  background: transparent !important;
+  border: 1px solid #ffffff !important;
+}
+
+.browse {
+  height: auto;
+  width: 300px;
+}
+
+.browse-img {
+  height: 220px;
+  img {
+    width: 100%;
+    height: 205px;
+    object-fit: cover;
+  }
+}
+
+.desc {
+  img {
+    height: 20px;
+    width: 20px !important;
+  }
+  p {
+    font-size: 11px;
+  }
+}
+
+.dtl {
+  .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: var(--theme-blue) !important;
+  }
+  .mat-tab-nav-bar, .mat-tab-header {
+    border-bottom: 1px solid rgb(0 0 0 / 0%) !important;
+  }
+
+  .mat-tab-label .mat-tab-label-content {
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif !important; 
+    font-weight: 600;
+  }
+  .mat-tab-label-active.mat-tab-label, .mat-tab-link {
+    color: var(--theme-blue) !important;
+  }
+  .mat-tab-label, .mat-tab-link {
+    color: #b6b4b5 !important;
+  }
+  .mat-tab-header {
+    margin: 0 auto;
+  }
+}
+
+.border-lg-left {
+  border-left: 1px solid #717070;
+  padding: 0 2.36rem;
+  @media (max-width: 992px) {
+    padding: 0 1.36rem;
+  }
+}
+
+sup {
+  top: -0.3em !important;
+}
+
+@media(max-width: 991px) {
+  .border-lg-left {
+    border: 0;
+  }
+  .mat-tab-label .mat-tab-label-content {
+    font-size: 20px !important;
+  }
+  h1 {
+    margin-top: 30px;
+  }
+  .br {
+    margin-top: 250px;
+  }
+}
+
+.slide-content {
+  .owl-prev, .owl-next {
+      background-color: #868686 !important;
+      border-radius: 50% !important;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #000 !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .owl-prev {
+    left: 40px;
+  }
+  .owl-next {
+    right: 20px;
+    @media (max-width: 992px) {
+      right: 40px;
+    }
+  }
+  .material-icons {
+    font-size: 38px;
+    line-height: 44px;
+  }
+}
+.custom-modalbox {
+  mat-dialog-container {
+      padding: 0;
+      overflow: hidden;
+  }
+}
+
+.search-dropdown {
+  .mat-form-field-appearance-fill .mat-form-field-underline::before {
+    background-color: rgb(0 0 0 / 0%) !important;
+  }
+
+  .mat-select-arrow {
+    // border: 0 !important;
+    // height: 20px !important;
+    // width: 20px !important;
+    // background: url(./assets/images/down_arrow@1px.png) center center no-repeat;
+    height: 10px !important;
+    width: 10px !important;
+    border-color: var(--purple);
+    border-width: 1px 1px 0 0;
+    transform: rotate(
+    135deg
+    );
+    margin-top: -6px;
+  }
+  .mat-form-field-wrapper {
+    padding-bottom: 0 !important;
+  }
+  .mat-form-field-appearance-fill .mat-form-field-flex,
+  .mat-form-field-ripple {
+    background-color: rgb(0 0 0 / 0%) !important;
+  }
+
+  .mat-icon {
+    margin-right: 20px;
+  }
+  .bg-search-dropdown {
+    background-color: #ffffff !important;
+    border: 1px solid #0b1249;
+    border-radius: 5px;
+  }
+}
+
+.mat-checkbox-checkmark-path {
+  stroke: #0a0c47 !important;
+}
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: #fbfbfb;
+  border: 2px solid #757575;
+}
+
+.h-white {
+  filter: invert(1) saturate(0.5) grayscale(1);
+}
+

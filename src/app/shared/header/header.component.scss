@@ -1,0 +1,147 @@
+// a {
+//   padding: 0 15px;
+//   margin: 0 10px;
+//   cursor: pointer;
+
+//   &.active {
+//     color: red;
+//   }
+// }
+
+// .loggedBox {
+//   user-select: none;
+//   cursor: pointer;
+
+//   .userimg {
+//     height: 40px;
+//     background: #fff;
+//     border-radius: 50%;
+
+//     .mat-icon {
+//       font-size: 30px;
+//     }
+//   }
+
+//   .name {
+//     font-size: 15px;
+//   }
+// }
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  ul {
+      li {
+          a {
+              display: block;
+              padding: 0 20px;
+              font-weight: 700;
+              color: var(--white);
+              &:hover {
+                  color: var(--white);
+              }
+              &.active {
+                  color: var(--white);
+              }
+          }
+      }
+  }
+
+  .login {
+      padding: 10px 44px;
+      border-radius: 5px;
+      font-weight: bold;
+  }
+}
+
+@media (max-width: 1024px) {
+  .menuBackDrop {
+      background-color: rgba(#000000, 0.5);
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 0%;
+      height: 100vh;
+      z-index: 99998;
+      transition: ease 0.3s;
+      &.active {
+          width: 100%;
+      }
+  }
+  .mainMenuWrap {
+      position: fixed;
+      left: -270px;
+      top: 0;
+      height: 100vh;
+      overflow: auto;
+      width: 250px;
+      background-color: #ffffff;
+      z-index: 99999;
+      box-shadow: 0 3px 15px rgba(#000000, 0.2);
+      transition: ease 0.3s;
+      &.active {
+          left: 0;
+          background-color: var(--theme-blue);
+      }
+  }
+
+  header {
+      padding: 5px 0;
+      .logo {
+          img {
+              height: 70px;
+          }
+      }
+      ul {
+          li {
+              a {
+                  display: block;
+                  padding: 14px 10px;
+              }
+          }
+      }
+
+      .login {
+          padding: 9px 34px;
+      }
+  }
+}
+.header-top{
+  font-size: 13px;
+  line-height: 20px;
+}
+
+@media (max-width: 767px) {
+    .header-top {
+        img {
+            height: 10px;
+        }
+        .bank {
+            height: 22px !important;
+        }
+        button {
+            font-size: 10px;
+            padding: 5px;
+        }
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 575px) {
+  header {
+      padding: 5px 0;
+      .logo {
+          img {
+              height: 50px;
+          }
+      }
+
+      .login {
+          padding: 7px 24px;
+          font-size: 12px;
+      }
+  }
+}
+

@@ -1,0 +1,131 @@
+
+.banner-bg {
+    height: 50vh !important;
+    @media (max-width: 991px) {
+        height: 58vh !important;
+    }
+    @media (max-width: 768px) {
+        height: 50vh !important;
+    }  
+    @media (max-width: 767px) {
+        height: 58vh !important;
+    }  
+}
+
+h1 {
+    color: #000000;
+    font-weight: 700;
+    
+    text-align: center;
+    line-height: 100px;
+}
+
+.gallery-img-1 {
+    height: 882px;
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 882px;
+    }
+}
+.gallery-img-2 {
+    height: 430px;
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 430px;
+    }
+}
+.gallery-img-3 {
+    height: 430px;
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 430px;
+    }
+}
+.gallery-img-4 {
+    height: 430px;
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 430px;
+    }
+}
+.gallery-img-5 {
+    height: 430px;
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 430px;
+    }
+}
+
+.gallery-list {
+    .gallery-item {
+        margin: 30px 0 30px 23px;
+        width: 18%;
+        height: 285px;
+        border-radius: 10px;
+        filter: drop-shadow(0px 3px 31px rgba(0,0,0,0.2));
+        background-color: #ffffff;
+        @media(max-width: 1024px) {
+            width: 100%;
+            margin: 30px 30px 30px 23px;
+        }
+        .item-img {
+            width: 100%;
+            height: 233px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            img {
+                width: 100%;
+                height: 213px;
+                border-radius: 5px;
+                object-fit: cover;
+                position: relative;
+                z-index: 1;
+            }
+              iframe{
+                width: 100%;
+                height: 213px;
+                border-radius: 5px;
+                object-fit: cover;
+                position: relative;
+                z-index: 1;
+                }
+            .play {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #ffffff;
+                box-shadow:
+                    0 0 0 5px hsla(0, 0%, 80%, 0.479),
+                    0 0 0 10px hsla(0, 0%, 93%, 0.664),
+                    0 0 0 15px hsla(0, 0%, 90%, 0.144);
+                border-radius: 50%;
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+
+              
+            }
+        }
+        p {
+            font-size: 20px;
+            color: #000000;
+            font-weight: 700;
+            
+            text-align: center;
+        }
+    }
+}

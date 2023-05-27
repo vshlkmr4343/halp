@@ -1,0 +1,146 @@
+
+.banner-bg {
+    height: 50vh !important;
+    @media (max-width: 991px) {
+        height: 58vh !important;
+    }
+    @media (max-width: 768px) {
+        height: 50vh !important;
+    }    
+    @media (max-width: 767px) {
+        height: 58vh !important;
+    }  
+}
+
+h1 {
+    color: #000000;
+    font-weight: 700;
+    
+    text-align: center;
+    line-height: 100px;
+}
+.email-enquiry {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0px 3px 31px rgba(0,0,0,0.1));
+    background-color: #ffffff;
+
+    .em-enq-heading {
+        width: 100%;
+        height: 100px;
+        background-color: #01104b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            height: 50px;
+        }
+    }
+    .user-info {
+        display: flex;
+        align-items: center;
+        figure {
+            width: 113px;
+            height: 113px;
+            background-color: #01104b;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 110px;
+                height: 110px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+
+        h6 {
+            font-size: 18px;
+            line-height: 33px;
+            color: #01104b;
+            font-weight: 600;
+            
+        }
+        .user-id {
+            font-size: 18px;
+            line-height: 33px;
+            color: #000000;
+            font-weight: 600;
+            
+            width: 112px;
+            height: 31px;
+            background-color: #ffffff;
+            border: 1px solid #000000;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        h6.address, h6.price {
+            font-size: 21px;
+            line-height: 37px;
+            color: #1d1d1b;
+            font-weight: 500;
+            font-family: "Avenir Next";
+        }
+    }
+
+    .enq-form {
+        h6 {
+            font-size: 18px;
+            line-height: 30px;
+            color: #000000;
+            font-weight: 600;
+            
+        }
+        .enq-check {
+            ul {
+                padding-left: 0;
+                margin-right: 100px;
+                @media (max-width: 768px) {
+                    margin-right: 10px;
+                    margin-bottom: 0;
+                }
+                li {
+                    list-style-type: none;
+                    font-size: 16px;
+                    line-height: 30px;
+                    color: #000000;
+                    font-weight: 500;
+                    
+                }
+            }
+        }
+        input, input::placeholder,
+        textarea, textarea::placeholder {
+            font-size: 18px;
+            line-height: 30px;
+            color: #000000;
+            font-weight: 600;
+            
+        }
+        input, textarea {
+            border-radius: 5px;
+            border: 1px solid #000000;
+        }
+        input {
+            height: 70px;
+            padding: 20px;
+        }
+        .btn-submit {
+            width: 291px;
+            height: 60px;
+            border-radius: 5px;
+            filter: drop-shadow(0px 24px 45px rgba(39,39,39,0.08));
+            background-color: #001149;
+            font-size: 25px;
+            letter-spacing: -1px;
+            line-height: 38px;
+            color: #ffffff;
+            font-weight: 700;
+            
+            text-transform: uppercase;
+        }
+    }
+}
